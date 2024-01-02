@@ -1,0 +1,183 @@
+* {
+   all: unset;
+}
+
+$background: #0d0f18;
+$foreground: #a5b6cf;
+
+$black: #151720;
+$gray: #565f89;
+$red: #f7768e;
+$green: #73daca;
+$yellow: #e0af68;
+$blue: #7aa2f7;
+$magenta: #bb9af7;
+$cyan: #7dcfff;
+$white: $foreground;
+
+.eww_bar {
+  background-color: $background;
+  padding: 1px;
+  border-radius: 10px;
+}
+
+.launcher_icon {
+   color: #1793d1;
+   font-family: 'JetBrainsMono Nerd Font';
+   font-size: 1.8em;
+   padding-right: 0.7rem;
+   padding-top: 0.7rem;
+   padding-bottom: 0.5rem;
+}
+
+.works {
+   font-family: 'Material Design Icons Desktop';
+   padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+   background-color: $black;
+   border-radius: 5px;
+}
+
+.workspace-focused {
+   font-size: 18px;
+   color: #8ea6c4;
+   margin: 0.35rem 0 0.35rem 0;
+}
+
+.workspace-occupied {
+   font-size: 18px;
+   color: #6e8db4;
+   margin: 0.35rem 0 0.35rem 0;
+}
+
+.workspace-empty {
+   font-size: 18px;
+   color: #434c5e;
+   margin: 0.35rem 0 0.35rem 0;
+}
+
+.control {
+   padding: 0.5rem;
+   font-family: Material Icons;
+   font-size: 1.6em;
+   background-color: $black;
+   border-radius: 5px;
+}
+.bat {
+   font-family: JetBrainsMono Nerd Font;
+   font-size: 1.2em;
+   padding-right: 0.5rem;
+   color: $blue;
+}
+.wifi-icon {
+   margin-bottom: 0.2rem;
+   color: $magenta;
+}
+.brightness-icon {
+   margin: 0.2rem 0 0.2rem 0;
+   color: $yellow;
+}
+.volume-icon {
+   margin: 0.2rem 0 0.2rem 0;
+   color: $green;
+}
+scale trough {
+   all: unset;
+   background-color: $background;
+   border-radius: 5px;
+   min-height: 80px;
+   min-width: 10px;
+   margin: 0.3rem 0 0.3rem 0;
+}
+.bribar trough highlight {
+   background-color: $yellow;
+   border-radius: 5px;
+}
+.volbar trough highlight {
+   background-color: $green;
+   border-radius: 5px;
+}
+
+// Clock
+.time {
+   font-family: FiraCodeMono Nerd Font;
+   font-weight: bold;
+   font-size: 1.2em;
+   background-color: $black;
+   color: $white;
+   border-radius: 5px;
+   padding: 0.7rem 0 0.5rem 0;
+   margin: 0.5rem 0 0.5rem 0;
+}
+
+// Calendar
+.cal-box {
+   background-color: #181825;
+   border-radius: 15px;
+   font-family: JetBrainsMono Nerd Font;
+   font-size: 0.9em;
+
+   .cal-inner-box {
+      padding: 1rem 1rem 0.3rem 1rem;
+
+      .cal {
+         &.highlight {
+            padding: 10rem;
+         }
+
+         padding: 0.8rem 0.25rem 0rem;
+         margin-left: 10px;
+      }
+   }
+}
+
+calendar:selected {
+   color: #77e204;
+}
+
+calendar.header {
+   color: #ad8ee6;
+   font-weight: bold;
+}
+
+calendar.button {
+   color: #449dab;
+}
+
+calendar.highlight {
+   color: #7aa2f7;
+   font-weight: bold;
+}
+
+calendar:indeterminate {
+   color: #8c8c8c;
+}
+
+// Powermenu
+.powermenu {
+   font-family: feather;
+   font-size: 1.4em;
+   font-weight: bold;
+}
+.button-bspres,
+.button-reb,
+.button-lock,
+.button-quit,
+.button-off {
+   padding: 0.5rem 0.2rem 0.3rem 0.2rem;
+}
+.button-off {
+   margin-bottom: 0.5rem;
+   color: $red;
+}
+.button-bspres {
+   color: $green;
+}
+.button-reb {
+   color: $yellow;
+}
+.button-quit {
+   color: $magenta;
+}
+.button-lock {
+   color: $blue;
+}

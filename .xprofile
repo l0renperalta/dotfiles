@@ -1,0 +1,33 @@
+vga=`xrandr | grep ' connected' | grep 'VGA' | awk '{print $1}'`
+laptop=`xrandr | grep ' connected primary' | grep -v 'VGA' | awk '{print $1}'`
+
+# External Monitor Config
+if [ "$vga" = "VGA1" ]; then
+  xrandr --output "$laptop" --off --output VGA1 --primary --mode 1366x768 --pos 0x0 --rotate normal &
+else
+  xrandr --output "$laptop" --primary --mode 1366x768 --pos 0x0 --rotate normal --output VGA1 --off --output DP1 --off &
+fi
+
+# Double Monitor Config
+# if [ "$vga" = "VGA1" ]; then
+#   xrandr --output "$laptop" --primary --mode 1366x768 --pos 1440x0 --rotate normal --output VGA1 --mode 1440x900 --pos 0x0 &
+# else
+#   xrandr --output "$laptop" --primary --mode 1366x768 --pos 0x0 --rotate normal --output VGA1 --off --output DP1 --off &
+# fi
+
+nitrogen --restore &
+
+dunst --config $HOME/.config/dunst/dunstrc &
+
+picom &
+
+udiskie &
+
+nm-applet &
+
+sxhkd &
+exec bspwm
+
+# volumeicon &
+# cbatticon &
+# start qtile

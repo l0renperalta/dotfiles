@@ -1,0 +1,13 @@
+; includes:
+;widgets
+(include "widgets.yuck")
+
+;; Calendar Windows ;;
+
+(defwindow calendar
+	:geometry (geometry :x "-10px" 
+	:y "40px" 
+	:width "250px" 
+	:height "60px"
+	:anchor "top right")
+(cal))
